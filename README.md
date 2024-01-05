@@ -66,12 +66,12 @@ Instructions on setting up test project locally. To get a local copy up and runn
 * Cypress app
 * (Optional) Visual Studio Code
 
-### Installation
+### Setup
 
 1. Install and start Cypress app
 2. Clone the repo
    ```sh
-   git clone 
+   git clone git@github.com:pyclam626/plotlyTest.git
    ```
 3. Install NPM packages
    ```sh
@@ -83,7 +83,8 @@ Instructions on setting up test project locally. To get a local copy up and runn
 
 ## Usage
 
-1. Using Gradle: run `npx cypress run --record --spec "cypress/e2e/testCyress.cy.js"` to execute
+1. GUI: Launch Cypress app, then open/run "cypress/e2e/testCyress.cy.js"
+2. CLI: run `npx cypress run --record --spec "cypress/e2e/testCyress.cy.js"` to execute
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
