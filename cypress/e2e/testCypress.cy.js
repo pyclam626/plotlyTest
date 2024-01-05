@@ -10,9 +10,10 @@
 
 describe('Cypress website test', () => {
   beforeEach(() => {
-    // Visit Cypress web site in beforeEach function so that it runs before each test
+    // Set Browser view 1280 x 720
     cy.viewport(1280, 720)
-    cy.visit('https://www.cypress.io/', { timeout: 100000 })
+    // Visit Cypress web site in beforeEach function so that it runs before each test
+    cy.visit('https://www.cypress.io/')
   })
 
   it('can scroll down to find weekly downloads number', () => {
@@ -47,6 +48,13 @@ describe('Cypress website test', () => {
   
   it('User is able to see green circle around Test Analytics', () => {
     // Bonus test case: User is able to click on “Product”, then “Smart Orchestration”, then scroll down to “Test Analytics” and see that the green circle is around “Test Analytics"
+    cy.get('[data-cy="dropdown-product"]').trigger('mouseover')
+    cy.contains('Smart Orchestration').click()
+    cy.contains('Test Analytics').scrollIntoView().should('be.visible')
+    // Verify green cirle around "Test Analytics"
+    cy.get('a')
+      .should('contain','Test Analytics')
+      .and ('contain', 'border-jade-200')
   })  
 
   // Function to verify clipboard copied value
