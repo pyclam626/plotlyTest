@@ -42,7 +42,7 @@ Write test for following test cases:
 2. User is able to click on Company and then on “About Cypress”
 3. User is able to click on “Install” and then on “npm install cypress” and make sure the copied text is “npm install cypress --save-dev”
 4. User is able to click on “Product” and then “visual review”
-Bonus: User is able to click on “Product”, then “Smart Orchestration”, then scroll down to “Test Analytics” and see that the green circle is around “Test Analytics"
+5. Bonus: User is able to click on “Product”, then “Smart Orchestration”, then scroll down to “Test Analytics” and see that the green circle is around “Test Analytics"
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
