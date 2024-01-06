@@ -27,7 +27,7 @@ describe('Cypress website test', () => {
     // Test case 2: User is able to click on Company and then on “About Cypress”
     cy.get('[data-cy="dropdown-company"]').trigger('mouseover')
     cy.contains('About Cypress').click()
-    cy.contains('About Cypress').should('be.visible')
+    cy.contains('About us').should('be.visible')
   })
 
   it('can click and copy npm install cypress text', () => {
