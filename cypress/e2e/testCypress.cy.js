@@ -42,8 +42,8 @@ describe('Cypress website test', () => {
   it('User is able to click on Product and then visual review', () => {
     // Test case 4: User is able to click on “Product” and then “visual review”
     cy.get('[data-cy="dropdown-product"]').trigger('mouseover')
-    cy.contains('Visual Review').click()
-    cy.contains('Visual Review').should('be.visible')
+    cy.contains('Visual Reviews').click()
+    cy.contains('Review and debug failures visually').should('be.visible')
   })
   
   it('User is able to see green circle around Test Analytics', () => {
