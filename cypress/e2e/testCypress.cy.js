@@ -13,7 +13,7 @@ describe('Cypress website test', () => {
     // Visit Cypress web site in beforeEach function so that it runs before each test
     cy.visit('https://www.cypress.io/')
   })
-  /*
+  
   it('can scroll down to find weekly downloads number', () => {
     // Test case 1: Users are able to visit the website and able to scroll down to “Loved by OSS, trusted by Enterprise” and see the weekly downloads number.
     cy.contains('Loved by').scrollIntoView().should('be.visible')
@@ -43,7 +43,7 @@ describe('Cypress website test', () => {
     cy.contains('Visual Reviews').click()
     cy.contains('Review and debug failures visually').should('be.visible')
   })
-  */
+  
   it('can see green circle around Test Analytics', () => {
     // Bonus test case: User is able to click on “Product”, then “Smart Orchestration”, then scroll down to “Test Analytics” and see that the green circle is around “Test Analytics".
     cy.get('[data-cy="dropdown-product"]').trigger('mouseover')
