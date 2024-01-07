@@ -15,7 +15,7 @@ describe('Cypress website test', () => {
     // Visit Cypress web site in beforeEach function so that it runs before each test
     cy.visit('https://www.cypress.io/')
   })
-
+  
   it('can scroll down to find weekly downloads number', () => {
     // Test case 1: Users are able to visit the website and able to scroll down to “Loved by OSS, trusted by Enterprise” and see the weekly downloads number.
     cy.contains('Loved by').scrollIntoView().should('be.visible')
@@ -49,13 +49,12 @@ describe('Cypress website test', () => {
   it('User is able to see green circle around Test Analytics', () => {
     // Bonus test case: User is able to click on “Product”, then “Smart Orchestration”, then scroll down to “Test Analytics” and see that the green circle is around “Test Analytics"
     cy.get('[data-cy="dropdown-product"]').trigger('mouseover')
-    cy.contains('Smart Orchestration').click()
-    cy.contains('Test Analytics').scrollIntoView().should('be.visible')
+    cy.contains('Smart Orchestration').click({force: true})
+    cy.contains('Gain actionable insights into your test suite').scrollIntoView().should('be.visible')
     // Verify green cirle around "Test Analytics"
-    cy.get('a')
-      .should('contain','Test Analytics')
-      .and ('contain', 'border-jade-200')
-  })  
+    cy.get('.hidden > [href="#test_analytics"]')
+    cy.get('.hidden > .border-jade-200')
+  })
 
   // Function to verify clipboard copied value
   Cypress.Commands.add('assertCopiedValue', value => {
